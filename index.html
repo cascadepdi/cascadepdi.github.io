@@ -784,7 +784,7 @@ Pressionando ESC: este sairá do software de anotação</p>
 <p>A partir desse arquivo txt nós geramos um arquvio .dat com a localização das mãos</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. bg.txt</caption>
+<caption class="title">Table 1. info.dat</caption>
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -957,6 +957,162 @@ f.close()</code></pre>
 <div class="paragraph">
 <p>-h: Altura Usada na Imagem Base</p>
 </div>
+<div class="paragraph">
+<p>Na imagem abaixo vemos o comando em execução</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="figures/Unidade3/inicio.png" alt="inicio.png">
+</div>
+<div class="title">Figure 13. Cascade Inicial</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="figures/Unidade3/meio.png" alt="meio.png">
+</div>
+<div class="title">Figure 14. Cascade em Execução</div>
+</div>
+<div class="paragraph">
+<p>É possível também carregar novos estágios a partir de outros já carregados, vemos isso na figura abaixo</p>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="figures/Unidade3/loaded.png" alt="loaded.png">
+</div>
+<div class="title">Figure 15. Cascade Final</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resultado_final_2">Resultado Final</h3>
+<div class="paragraph">
+<p>Após gerar o cascade do findcoke e do findhand, a partir do código abaixo nós gravamos alguns videos do funcionamento de ambos os cascades em tempo real</p>
+</div>
+<div id="VideoWritter" class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-cpp" data-lang="cpp">/**
+  @file videowriter_basic.cpp
+  @brief A very basic sample for using VideoWriter and VideoCapture
+  @author PkLab.net
+  @date Aug 24, 2016
+*/
+#include "opencv2/opencv.hpp"
+#include &lt;opencv2/core.hpp&gt;
+#include &lt;opencv2/videoio.hpp&gt;
+#include &lt;opencv2/highgui.hpp&gt;
+#include &lt;iostream&gt;
+#include &lt;stdio.h&gt;
+
+using namespace cv;
+using namespace std;
+
+Mat detectAndDisplay( Mat frame );
+
+int main(int, char**)
+{
+    Mat src;
+    // use default camera as video source
+    VideoCapture cap(0);
+    // check if we succeeded
+    if (!cap.isOpened()) {
+        cerr &lt;&lt; "ERROR! Unable to open camera\n";
+        return -1;
+    }
+    // get one frame from camera to know frame size and type
+    cap &gt;&gt; src;
+    // check if we succeeded
+    if (src.empty()) {
+        cerr &lt;&lt; "ERROR! blank frame grabbed\n";
+        return -1;
+    }
+    bool isColor = (src.type() == CV_8UC3);
+
+    //--- INITIALIZE VIDEOWRITER
+    VideoWriter writer;
+    int codec = CV_FOURCC('M', 'J', 'P', 'G');  // select desired codec (must be available at runtime)
+    double fps = 5.0;                          // framerate of the created video stream
+    string filename = "./live3.avi";             // name of the output video file
+    writer.open(filename, codec, fps, src.size(), isColor);
+    // check if we succeeded
+    if (!writer.isOpened()) {
+        cerr &lt;&lt; "Could not open the output video file for write\n";
+        return -1;
+    }
+
+    //--- GRAB AND WRITE LOOP
+    cout &lt;&lt; "Writing videofile: " &lt;&lt; filename &lt;&lt; endl
+         &lt;&lt; "Press any key to terminate" &lt;&lt; endl;
+    for (;;)
+    {
+        // check if we succeeded
+        if (!cap.read(src)) {
+            cerr &lt;&lt; "ERROR! blank frame grabbed\n";
+            break;
+        }
+        src = detectAndDisplay(src);
+        // encode the frame into the videofile stream
+        writer.write(src);
+        // show live and wait for a key with timeout long enough to show images
+        imshow("Live", src);
+        if (waitKey(5) &gt;= 0)
+            break;
+    }
+    // the videofile will be closed and released automatically in VideoWriter destructor
+    return 0;
+}
+
+Mat detectAndDisplay( Mat frame )
+{
+	CascadeClassifier coke_cascade;
+	CascadeClassifier hand_cascade;
+    coke_cascade.load("cascade.xml");
+    hand_cascade.load("hand2cascade.xml");
+    Mat frame_gray;
+    cvtColor( frame, frame_gray, COLOR_BGR2GRAY );
+    equalizeHist( frame_gray, frame_gray );
+    //-- Detect faces
+    std::vector&lt;Rect&gt; cokes;
+    std::vector&lt;Rect&gt; hands;
+    coke_cascade.detectMultiScale( frame_gray, cokes, 1.030, 3);
+    hand_cascade.detectMultiScale( frame_gray, hands, 9.3, 16);
+    for ( size_t i = 0; i &lt; cokes.size(); i++ )
+    {
+		Rect coke_i = cokes[i];
+        Point center( cokes[i].x + cokes[i].width/2, cokes[i].y + cokes[i].height/2 );
+        rectangle(frame, coke_i, CV_RGB(0, 255,0), 1);
+        //ellipse( frame, center, Size( cokes[i].width/2, cokes[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4 );
+        Mat faceROI = frame_gray( cokes[i] );
+        //imwrite( "Saida_Webcam.jpg", frame );
+    }
+    for ( size_t i = 0; i &lt; hands.size(); i++ )
+    {
+		Rect hand_i = hands[i];
+        Point center( hands[i].x + hands[i].width/2, hands[i].y + hands[i].height/2 );
+        rectangle(frame, hand_i, CV_RGB(0, 255,0), 1);
+        //ellipse( frame, center, Size( cokes[i].width/2, cokes[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4 );
+        Mat faceROI = frame_gray( hands[i] );
+        //imwrite( "Saida_Webcam.jpg", frame );
+    }
+    return frame;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>E o resultado que obtemos foram os videos abaixo</p>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="exemplos/Unidade3/live2.mp4#t=0,140" width="960" controls>
+Your browser does not support the video tag.
+</video>
+</div>
+</div>
+<div class="videoblock">
+<div class="content">
+<video src="exemplos/Unidade3/live1.mp4#t=0,140" width="960" controls>
+Your browser does not support the video tag.
+</video>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -970,7 +1126,7 @@ f.close()</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-28 09:35:03 -03
+Last updated 2018-06-28 23:20:08 -03
 </div>
 </div>
 </body>
