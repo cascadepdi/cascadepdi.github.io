@@ -416,6 +416,77 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
 </style>
+<style>
+.listingblock .pygments .hll { background-color: #ffffcc }
+.listingblock .pygments  { background: #f8f8f8; }
+.listingblock .pygments .tok-c { color: #408080; font-style: italic } /* Comment */
+.listingblock .pygments .tok-err { border: 1px solid #FF0000 } /* Error */
+.listingblock .pygments .tok-k { color: #008000; font-weight: bold } /* Keyword */
+.listingblock .pygments .tok-o { color: #666666 } /* Operator */
+.listingblock .pygments .tok-ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.listingblock .pygments .tok-cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.listingblock .pygments .tok-cp { color: #BC7A00 } /* Comment.Preproc */
+.listingblock .pygments .tok-cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.listingblock .pygments .tok-c1 { color: #408080; font-style: italic } /* Comment.Single */
+.listingblock .pygments .tok-cs { color: #408080; font-style: italic } /* Comment.Special */
+.listingblock .pygments .tok-gd { color: #A00000 } /* Generic.Deleted */
+.listingblock .pygments .tok-ge { font-style: italic } /* Generic.Emph */
+.listingblock .pygments .tok-gr { color: #FF0000 } /* Generic.Error */
+.listingblock .pygments .tok-gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.listingblock .pygments .tok-gi { color: #00A000 } /* Generic.Inserted */
+.listingblock .pygments .tok-go { color: #888888 } /* Generic.Output */
+.listingblock .pygments .tok-gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.listingblock .pygments .tok-gs { font-weight: bold } /* Generic.Strong */
+.listingblock .pygments .tok-gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.listingblock .pygments .tok-gt { color: #0044DD } /* Generic.Traceback */
+.listingblock .pygments .tok-kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.listingblock .pygments .tok-kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.listingblock .pygments .tok-kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.listingblock .pygments .tok-kp { color: #008000 } /* Keyword.Pseudo */
+.listingblock .pygments .tok-kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.listingblock .pygments .tok-kt { color: #B00040 } /* Keyword.Type */
+.listingblock .pygments .tok-m { color: #666666 } /* Literal.Number */
+.listingblock .pygments .tok-s { color: #BA2121 } /* Literal.String */
+.listingblock .pygments .tok-na { color: #7D9029 } /* Name.Attribute */
+.listingblock .pygments .tok-nb { color: #008000 } /* Name.Builtin */
+.listingblock .pygments .tok-nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.listingblock .pygments .tok-no { color: #880000 } /* Name.Constant */
+.listingblock .pygments .tok-nd { color: #AA22FF } /* Name.Decorator */
+.listingblock .pygments .tok-ni { color: #999999; font-weight: bold } /* Name.Entity */
+.listingblock .pygments .tok-ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.listingblock .pygments .tok-nf { color: #0000FF } /* Name.Function */
+.listingblock .pygments .tok-nl { color: #A0A000 } /* Name.Label */
+.listingblock .pygments .tok-nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.listingblock .pygments .tok-nt { color: #008000; font-weight: bold } /* Name.Tag */
+.listingblock .pygments .tok-nv { color: #19177C } /* Name.Variable */
+.listingblock .pygments .tok-ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.listingblock .pygments .tok-w { color: #bbbbbb } /* Text.Whitespace */
+.listingblock .pygments .tok-mb { color: #666666 } /* Literal.Number.Bin */
+.listingblock .pygments .tok-mf { color: #666666 } /* Literal.Number.Float */
+.listingblock .pygments .tok-mh { color: #666666 } /* Literal.Number.Hex */
+.listingblock .pygments .tok-mi { color: #666666 } /* Literal.Number.Integer */
+.listingblock .pygments .tok-mo { color: #666666 } /* Literal.Number.Oct */
+.listingblock .pygments .tok-sa { color: #BA2121 } /* Literal.String.Affix */
+.listingblock .pygments .tok-sb { color: #BA2121 } /* Literal.String.Backtick */
+.listingblock .pygments .tok-sc { color: #BA2121 } /* Literal.String.Char */
+.listingblock .pygments .tok-dl { color: #BA2121 } /* Literal.String.Delimiter */
+.listingblock .pygments .tok-sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.listingblock .pygments .tok-s2 { color: #BA2121 } /* Literal.String.Double */
+.listingblock .pygments .tok-se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.listingblock .pygments .tok-sh { color: #BA2121 } /* Literal.String.Heredoc */
+.listingblock .pygments .tok-si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.listingblock .pygments .tok-sx { color: #008000 } /* Literal.String.Other */
+.listingblock .pygments .tok-sr { color: #BB6688 } /* Literal.String.Regex */
+.listingblock .pygments .tok-s1 { color: #BA2121 } /* Literal.String.Single */
+.listingblock .pygments .tok-ss { color: #19177C } /* Literal.String.Symbol */
+.listingblock .pygments .tok-bp { color: #008000 } /* Name.Builtin.Pseudo */
+.listingblock .pygments .tok-fm { color: #0000FF } /* Name.Function.Magic */
+.listingblock .pygments .tok-vc { color: #19177C } /* Name.Variable.Class */
+.listingblock .pygments .tok-vg { color: #19177C } /* Name.Variable.Global */
+.listingblock .pygments .tok-vi { color: #19177C } /* Name.Variable.Instance */
+.listingblock .pygments .tok-vm { color: #19177C } /* Name.Variable.Magic */
+.listingblock .pygments .tok-il { color: #666666 } /* Literal.Number.Integer.Long */
+</style>
 </head>
 <body class="article">
 <div id="header">
@@ -443,7 +514,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_objetivo">Objetivo:</h3>
 <div class="paragraph">
-<p>Mostrar as utilizações dos comandos opencv_createsamples, opencv_annotation, opencv_traincascade e opencv_visualisation para treinar o seu próprio arquivo cascade</p>
+<p>Mostrar as utilizações dos comandos opencv_createsamples, opencv_annotation, opencv_traincascade e opencv_visualisation para treinar o seu próprio arquivo cascade.</p>
 </div>
 </div>
 <div class="sect2">
@@ -454,10 +525,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Dado uma imagem que contenha o objeto desejado para identificar, gerar varias imagens positivas a partir dela. Essa estrategia é útil para logotipos que não variam muito sua forma. Para essa etapa, o objetivo sera o de identificar o simbolo da Coca-Cola</p>
+<p>Dado uma imagem que contenha o objeto desejado para identificar, gerar varias imagens positivas a partir dela. Essa estrategia é útil para logotipos que não variam muito sua forma. Para essa etapa, o objetivo sera o de identificar o simbolo da Coca-Cola.</p>
 </li>
 <li>
-<p>Fornecer um conjunto de Imagens Positivas para treinar o cascade. Nessa etapa, o objetivo será o de identificar a palma da mão de uma pessoa</p>
+<p>Fornecer um conjunto de Imagens Positivas para treinar o cascade. Nessa etapa, o objetivo será o de identificar a palma da mão de uma pessoa.</p>
 </li>
 </ol>
 </div>
@@ -465,9 +536,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="_encontrando_o_simbolo_da_coca_cola">Encontrando o Simbolo da Coca-Cola</h3>
 <div class="paragraph">
-<p>A imagem tomada como base para é mostrada na Figura 11</p>
+<p>A imagem tomada como base para é mostrada na Figura 1.</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/coke.jpg" alt="Coca-Cola">
 </div>
@@ -478,50 +549,50 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="exa_selectarea" class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cpp" data-lang="cpp">#include &lt;opencv2/opencv.hpp&gt;
-using namespace std;
-using namespace cv;
-int main (int argc, char **argv)
-{
-    // Read image
-    Mat im = imread(argv[1],CV_LOAD_IMAGE_COLOR);
-    // Select ROI
-    Rect2d r = selectROI(im);
-    cout &lt;&lt; r &lt;&lt; endl;
-    // Crop image
-    Mat imCrop = im(r);
-    // Display Cropped Image
-    imshow("Image", imCrop);
-    imwrite(argv[2],imCrop);
-    waitKey(0);
-    return 0;
-}</code></pre>
+<pre class="pygments highlight"><code data-lang="cpp"><span class="tok-cp">#include</span> <span class="tok-cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="tok-cp"></span>
+<span class="tok-k">using</span> <span class="tok-k">namespace</span> <span class="tok-n">std</span><span class="tok-p">;</span>
+<span class="tok-k">using</span> <span class="tok-k">namespace</span> <span class="tok-n">cv</span><span class="tok-p">;</span>
+<span class="tok-kt">int</span> <span class="tok-nf">main</span> <span class="tok-p">(</span><span class="tok-kt">int</span> <span class="tok-n">argc</span><span class="tok-p">,</span> <span class="tok-kt">char</span> <span class="tok-o">**</span><span class="tok-n">argv</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+    <span class="tok-c1">// Read image</span>
+    <span class="tok-n">Mat</span> <span class="tok-n">im</span> <span class="tok-o">=</span> <span class="tok-n">imread</span><span class="tok-p">(</span><span class="tok-n">argv</span><span class="tok-p">[</span><span class="tok-mi">1</span><span class="tok-p">],</span><span class="tok-n">CV_LOAD_IMAGE_COLOR</span><span class="tok-p">);</span>
+    <span class="tok-c1">// Select ROI</span>
+    <span class="tok-n">Rect2d</span> <span class="tok-n">r</span> <span class="tok-o">=</span> <span class="tok-n">selectROI</span><span class="tok-p">(</span><span class="tok-n">im</span><span class="tok-p">);</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">r</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-c1">// Crop image</span>
+    <span class="tok-n">Mat</span> <span class="tok-n">imCrop</span> <span class="tok-o">=</span> <span class="tok-n">im</span><span class="tok-p">(</span><span class="tok-n">r</span><span class="tok-p">);</span>
+    <span class="tok-c1">// Display Cropped Image</span>
+    <span class="tok-n">imshow</span><span class="tok-p">(</span><span class="tok-s">&quot;Image&quot;</span><span class="tok-p">,</span> <span class="tok-n">imCrop</span><span class="tok-p">);</span>
+    <span class="tok-n">imwrite</span><span class="tok-p">(</span><span class="tok-n">argv</span><span class="tok-p">[</span><span class="tok-mi">2</span><span class="tok-p">],</span><span class="tok-n">imCrop</span><span class="tok-p">);</span>
+    <span class="tok-n">waitKey</span><span class="tok-p">(</span><span class="tok-mi">0</span><span class="tok-p">);</span>
+    <span class="tok-k">return</span> <span class="tok-mi">0</span><span class="tok-p">;</span>
+<span class="tok-p">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Após selecionar nossa região de interesse, nossa imagem ficou como mostrada a seguir:</p>
+<p>Após selecionar nossa região de interesse, nossa imagem ficou como mostrada a seguir na Figura 2.</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/coke-resize.jpg" alt="ResizeCoca-Cola.jpg">
 </div>
 <div class="title">Figure 2. Coca-Cola_resize.jpg</div>
 </div>
 <div class="paragraph">
-<p>Apesar de termos cortado a imagem original, nossa região de interesse ainda gerou uma imagem com muitos pixeis (1246,402). Com isso com intuito de simplificar o processo de criação do nosso próprio cascade, diminuímos 90% e convertemos a imagem para tons de cinza. Para isso, usamos o código ResizePositive.py mostrado a seguir</p>
+<p>Apesar de ter sido cortada a imagem original, a região de interesse ainda gerou uma imagem com muitos pixeis (1246,402). Com isso com intuito de simplificar o processo de criação do próprio cascade, diminuíu-se em 90% e a imagem foi convertida para tons de cinza. Para isso, foi utilizado o código ResizePositive.py mostrado a seguir.</p>
 </div>
 <div id="exa_FindCoke" class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">import cv2
-gray = cv2.imread("coke-resize.jpg",0)
-gray = cv2.resize(gray,(125,40))
-cv2.imwrite("coke-gray.jpg",gray)</code></pre>
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-kn">import</span> <span class="tok-nn">cv2</span>
+<span class="tok-n">gray</span> <span class="tok-o">=</span> <span class="tok-n">cv2</span><span class="tok-o">.</span><span class="tok-n">imread</span><span class="tok-p">(</span><span class="tok-s2">&quot;coke-resize.jpg&quot;</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">)</span>
+<span class="tok-n">gray</span> <span class="tok-o">=</span> <span class="tok-n">cv2</span><span class="tok-o">.</span><span class="tok-n">resize</span><span class="tok-p">(</span><span class="tok-n">gray</span><span class="tok-p">,(</span><span class="tok-mi">125</span><span class="tok-p">,</span><span class="tok-mi">40</span><span class="tok-p">))</span>
+<span class="tok-n">cv2</span><span class="tok-o">.</span><span class="tok-n">imwrite</span><span class="tok-p">(</span><span class="tok-s2">&quot;coke-gray.jpg&quot;</span><span class="tok-p">,</span><span class="tok-n">gray</span><span class="tok-p">)</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Com isso, nossa imagem base final para o cascade ficou como:</p>
+<p>Com isso, a imagem base final para o cascade ficou como mostrado na Figura 3</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/coke-gray.jpg" alt="coke-gray.jpg">
 </div>
@@ -532,30 +603,30 @@ cv2.imwrite("coke-gray.jpg",gray)</code></pre>
 <div class="paragraph">
 <p>Para que se possa treinar o cascade usando uma imagem como base, é necessário um conjunto de imagens negativas, tanto para mostrar ao algoritmo o que não procurar, quanto para inserir a figura nessas imagens.
 As figuras usadas como negativas foram obtidas através do link:
-<a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007/">http://host.robots.ox.ac.uk/pascal/VOC/voc2007/</a></p>
+<a href="http://host.robots.ox.ac.uk/pascal/VOC/voc2007/">http://host.robots.ox.ac.uk/pascal/VOC/voc2007/</a>.</p>
 </div>
 <div class="paragraph">
-<p>Esse banco de imagens foi armazenado em uma pasta intitulada "Negatives", o passo seguindo foi criar um arquivo "bg.txt" que contivesse um caminho para todas essas imagens. Para criar o arquivo "bg.txt", usamos o algoritmo CountNegatives.py, que além de criar o arquivo, redimensionou as imagens para 4 vezes a imagem base e as pôs tom de cinza</p>
+<p>Esse banco de imagens foi armazenado em uma pasta intitulada "Negatives", o passo seguindo foi criar um arquivo "bg.txt" que contivesse um caminho para todas essas imagens. Para criar o arquivo "bg.txt", utilizou-se o algoritmo CountNegatives.py, que além de criar o arquivo, redimensionou as imagens para 4 vezes a imagem base e as pôs tom de cinza.</p>
 </div>
 <div id="exa_CountNegatives" class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">import os
-import cv2
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-kn">import</span> <span class="tok-nn">os</span>
+<span class="tok-kn">import</span> <span class="tok-nn">cv2</span>
 
-f = open("bg.txt","w")
-for x in os.listdir("Negatives"):
-    gray = cv2.imread("Negatives/"+x,0)
-    gray = cv2.resize(gray,(500,160))
-    cv2.imwrite("Negatives/"+x,gray)
-    f.write("Negatives/"+x+"\n")
-f.close()</code></pre>
+<span class="tok-n">f</span> <span class="tok-o">=</span> <span class="tok-nb">open</span><span class="tok-p">(</span><span class="tok-s2">&quot;bg.txt&quot;</span><span class="tok-p">,</span><span class="tok-s2">&quot;w&quot;</span><span class="tok-p">)</span>
+<span class="tok-k">for</span> <span class="tok-n">x</span> <span class="tok-ow">in</span> <span class="tok-n">os</span><span class="tok-o">.</span><span class="tok-n">listdir</span><span class="tok-p">(</span><span class="tok-s2">&quot;Negatives&quot;</span><span class="tok-p">):</span>
+    <span class="tok-n">gray</span> <span class="tok-o">=</span> <span class="tok-n">cv2</span><span class="tok-o">.</span><span class="tok-n">imread</span><span class="tok-p">(</span><span class="tok-s2">&quot;Negatives/&quot;</span><span class="tok-o">+</span><span class="tok-n">x</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">)</span>
+    <span class="tok-n">gray</span> <span class="tok-o">=</span> <span class="tok-n">cv2</span><span class="tok-o">.</span><span class="tok-n">resize</span><span class="tok-p">(</span><span class="tok-n">gray</span><span class="tok-p">,(</span><span class="tok-mi">500</span><span class="tok-p">,</span><span class="tok-mi">160</span><span class="tok-p">))</span>
+    <span class="tok-n">cv2</span><span class="tok-o">.</span><span class="tok-n">imwrite</span><span class="tok-p">(</span><span class="tok-s2">&quot;Negatives/&quot;</span><span class="tok-o">+</span><span class="tok-n">x</span><span class="tok-p">,</span><span class="tok-n">gray</span><span class="tok-p">)</span>
+    <span class="tok-n">f</span><span class="tok-o">.</span><span class="tok-n">write</span><span class="tok-p">(</span><span class="tok-s2">&quot;Negatives/&quot;</span><span class="tok-o">+</span><span class="tok-n">x</span><span class="tok-o">+</span><span class="tok-s2">&quot;</span><span class="tok-se">\n</span><span class="tok-s2">&quot;</span><span class="tok-p">)</span>
+<span class="tok-n">f</span><span class="tok-o">.</span><span class="tok-n">close</span><span class="tok-p">()</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Nosso arquivo bg.txt fica como
-.bg.txt</p>
+<p>O arquivo bg.txt ficou como mostrado abaixo.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. bg.txt</caption>
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -602,34 +673,31 @@ f.close()</code></pre>
 <p>O comando opencv_createsamples permite criar um conjunto de imagens positivas tomando como base o banco de imagens negativas. Além dele uma serie de parâmetros devem ser levados em consideração, tais como:</p>
 </div>
 <div class="paragraph">
-<p>Onde:</p>
+<p>-img: Imagem de referência.</p>
 </div>
 <div class="paragraph">
-<p>-img: Imagem de referência</p>
+<p>-bg: Listagem da Localização do conjunto de imagem negativas.</p>
 </div>
 <div class="paragraph">
-<p>-bg: Listagem da Localização do conjunto de imagem negativas</p>
+<p>-info: Localização de onde estarão as novas imagens, juntamente do arquivo .dat, que referenciará as imagens positivas.</p>
 </div>
 <div class="paragraph">
-<p>-info: Localização de onde estarão as novas imagens, juntamente do arquivo .dat, que referenciará as imagens positivas</p>
+<p>-maxxangle: Rotação máxima da imagem base em x.</p>
 </div>
 <div class="paragraph">
-<p>-maxxangle: Rotação máxima da imagem base em x</p>
+<p>-maxyangle: Rotação máxima da imagem base em y.</p>
 </div>
 <div class="paragraph">
-<p>-maxyangle: Rotação máxima da imagem base em y</p>
+<p>-maxzangle: Rotação máxima da imagem base em z.</p>
 </div>
 <div class="paragraph">
-<p>-maxzangle: Rotação máxima da imagem base em z</p>
+<p>-num: Número de imagens Negativas.</p>
 </div>
 <div class="paragraph">
-<p>-num: Número de imagens Negativas</p>
+<p>-w: Largura proporcional da imagem.</p>
 </div>
 <div class="paragraph">
-<p>-w: Largura proporcional da imagem</p>
-</div>
-<div class="paragraph">
-<p>-h: Altura proporcional da imagem</p>
+<p>-h: Altura proporcional da imagem.</p>
 </div>
 <div class="paragraph">
 <p>O comando usado para isso pode ser mostrado a seguir:</p>
@@ -638,28 +706,28 @@ f.close()</code></pre>
 <p>opencv_createsamples -img coke-gray.jpg -bg bg.txt -info info3/info.dat -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 9963 -w 24 -h 8</p>
 </div>
 <div class="paragraph">
-<p>Após lançado esse comando, a pasta info/ estará contendo 9963 imagens com o logotipo da Coca-Cola inserido de forma randômica, como mostrado nas imagens a seguir:</p>
+<p>Após lançado esse comando, a pasta info/ estará contendo 9963 imagens com o logotipo da Coca-Cola inserido de forma randômica, como mostrado nas Figuras 4 e 5.</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
-<img src="exemplos/Unidade3/9959_0182_0074_0163_0054.jpg" alt="0045_0126_0047_0314_0104">
+<img src="exemplos/Unidade3/9959_0182_0074_0163_0054.jpg" alt="0045_0126_0047_0314_0104" height="200">
 </div>
 <div class="title">Figure 4. Imagem positiva 1</div>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
-<img src="exemplos/Unidade3/9961_0229_0036_0201_0067.jpg" alt="0159_0275_0014_0154_0051">
+<img src="exemplos/Unidade3/9961_0229_0036_0201_0067.jpg" alt="0159_0275_0014_0154_0051" height="1000">
 </div>
 <div class="title">Figure 5. Imagem positiva 2</div>
 </div>
 <div class="paragraph">
-<p>E o arquivo info.dat estará como</p>
+<p>E o arquivo info.dat estará como mostrado a seguir.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_criando_o_arquivo_positives_vec">Criando o arquivo positives.vec</h4>
 <div class="paragraph">
-<p>O penultimo passo é criar um arquivo .vec que será usado para o treinamento, basicamente é um arquivo que vai armazenar, assim como o info.dat, a localização das imagens positivas</p>
+<p>O penultimo passo é criar um arquivo .vec que será usado para o treinamento, basicamente é um arquivo que vai armazenar, assim como o info.dat, a localização das imagens positivas.</p>
 </div>
 <div class="paragraph">
 <p>Com isso, lançamos o comando:</p>
@@ -671,8 +739,10 @@ f.close()</code></pre>
 <div class="sect3">
 <h4 id="_treinamento">Treinamento</h4>
 <div class="paragraph">
-<p>Possuindo o maior número de argumentos possível,o comando opencv_traincascade é onde ocorre o passo final e é a etapa mais desafiadora. Contudo é possível realizar um treinamento com parâmetros aceitáveis
-o seguinte número de argumentos:</p>
+<p>Possuindo o maior número de argumentos possível,o comando opencv_traincascade é onde ocorre o passo final e é a etapa mais desafiadora. Contudo é possível realizar um treinamento com parâmetros aceitáveis.</p>
+</div>
+<div class="paragraph">
+<p>o seguinte número de argumentos:</p>
 </div>
 <div class="paragraph">
 <p>opencv_traincascade -data data3 -vec positives.vec -bg bg.txt -numPos 5400 -numNeg 2700 -numStages 25 -w 24 -h 8</p>
@@ -681,51 +751,51 @@ o seguinte número de argumentos:</p>
 <p>Onde:</p>
 </div>
 <div class="paragraph">
-<p>-data: Pasta onde será salvo o arquivo "cascade.xml"</p>
+<p>-data: Pasta onde será salvo o arquivo "cascade.xml.</p>
 </div>
 <div class="paragraph">
-<p>-vec: arquivo .vec criado anteriormente</p>
+<p>-vec: arquivo .vec criado anteriormente.</p>
 </div>
 <div class="paragraph">
-<p>-numPos: Número de Amostras positivas usadas por rodada</p>
+<p>-numPos: Número de Amostras positivas usadas por rodada.</p>
 </div>
 <div class="paragraph">
-<p>-numNeg: Número de amostras negativas usadas por rodada</p>
+<p>-numNeg: Número de amostras negativas usadas por rodada.</p>
 </div>
 <div class="paragraph">
-<p>-numStages: Número de Estágios ao qual nosso algoritmo vai passar</p>
+<p>-numStages: Número de Estágios ao qual nosso algoritmo vai passar.</p>
 </div>
 <div class="paragraph">
-<p>-w: Largura usada na Imagem Base</p>
+<p>-w: Largura usada na Imagem Base.</p>
 </div>
 <div class="paragraph">
-<p>-h: Altura Usada na Imagem Base</p>
+<p>-h: Altura Usada na Imagem Base.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="_resultado_final">Resultado Final</h4>
 <div class="paragraph">
-<p>Após a execução do treinamento, nosso arquivo "cascade.xml" foi capaz de identificar o logotipo da Coca em varias imagens, como mostrados a seguir:</p>
+<p>Após a execução do treinamento, o arquivo "cascade.xml" foi capaz de identificar o logotipo da Coca em varias imagens, como mostrados nas Figuras 6, 7, 8 e 9.</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/demo0.jpg" alt="demo0.jpg">
 </div>
 <div class="title">Figure 6. Exemplo 1</div>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/demo1.jpg" alt="demo1.jpg">
 </div>
 <div class="title">Figure 7. Exemplo 2</div>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/demo2.jpg" alt="demo2.jpg">
 </div>
 <div class="title">Figure 8. Exemplo 3</div>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="exemplos/Unidade3/demo3.jpg" alt="demo3.jpg">
 </div>
@@ -734,21 +804,24 @@ o seguinte número de argumentos:</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_encontrando_a_palma_da_mão_direita">Encontrando a palma da mão direita</h3>
+<h3 id="_encontrando_a_palma_da_mão">Encontrando a palma da mão</h3>
 <div class="paragraph">
-<p>Utilizamos um banco de dados de 3000 fotos que pode encontrado no seguinte <a href="https://www.mutah.edu.jo/biometrix/hand-images-databases.html">https://www.mutah.edu.jo/biometrix/hand-images-databases.html</a></p>
+<p>Foi utilizado um banco de dados de 3000 fotos que pode encontrado no seguinte <a href="https://www.mutah.edu.jo/biometrix/hand-images-databases.html">https://www.mutah.edu.jo/biometrix/hand-images-databases.html</a></p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="figures/Unidade3/hands_database.png" alt="hands_database.png">
 </div>
 <div class="title">Figure 10. Banco de mãos</div>
 </div>
 <div class="paragraph">
-<p>Em seguida utilizamos a função opencv_annotation</p>
+<p>Em seguida usou-se a função opencv_annotation.</p>
 </div>
 <div class="paragraph">
 <p>opencv_annotation --annotations=/path/to/annotations/file.txt --images=/path/to/image/folder/</p>
+</div>
+<div class="paragraph">
+<p>Onde:</p>
 </div>
 <div class="paragraph">
 <p>annotations: caminho para o arquivo txt das anotações, onde você deseja armazenar suas anotações, que são então passadas para o parâmetro -info [example - /data/annotations.txt]</p>
@@ -757,34 +830,41 @@ o seguinte número de argumentos:</p>
 <p>-images: caminho para a pasta que contém as imagens com seus objetos [example - / data / testimages /]</p>
 </div>
 <div class="paragraph">
-<p>para indicar onde a mão se encontra na imagem (tentou-se fazer com que a anotação ficasse o mais quadrado possível) e salvar as coordenadas como pode ser visto na seguinte imagem</p>
+<p>Para indicar onde a mão se encontra na imagem (Se tentou fazer com que a anotação ficasse o mais quadrado possível) e salvar as coordenadas como pode ser visto na Figura 11.</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="figures/Unidade3/hand_annotation.png" alt="hand_annotation.png">
 </div>
 <div class="title">Figure 11. Opencv_annotation</div>
 </div>
 <div class="paragraph">
-<p>Pressionando c: confirma a anotação, tornando a anotação verde e confirmando que está armazenada
-Pressionando d: exclui a última anotação da lista de anotações (fácil para remover anotações erradas)
-Pressionando n: continua para a próxima imagem
-Pressionando ESC: este sairá do software de anotação</p>
+<p>Pressionando c: confirma a anotação, tornando a anotação verde e confirmando que está armazenada.</p>
 </div>
 <div class="paragraph">
-<p>Geramos o seguinte arquivo txt com as coordenadas de cada mão nas imagens</p>
+<p>Pressionando d: exclui a última anotação da lista de anotações (fácil para remover anotações erradas).</p>
 </div>
-<div class="imageblock text-center">
+<div class="paragraph">
+<p>Pressionando n: continua para a próxima imagem.</p>
+</div>
+<div class="paragraph">
+<p>Pressionando ESC: este sairá do software de anotação.</p>
+</div>
+<div class="paragraph">
+<p>Então gerou-se o seguinte arquivo txt com as coordenadas de cada mão nas imagens.</p>
+</div>
+<div class="imageblock">
 <div class="content">
 <img src="figures/Unidade3/annotations_text.png" alt="annotations_text.png">
 </div>
 <div class="title">Figure 12. Localização das mãos</div>
 </div>
 <div class="paragraph">
-<p>A partir desse arquivo txt nós geramos um arquvio .dat com a localização das mãos</p>
+<div class="title">=</div>
+<p>A partir desse arquivo txt foi gerado um arquvio .dat com a localização das mãos.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. info.dat</caption>
+<caption class="title">Table 2. info.dat</caption>
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -854,37 +934,34 @@ Pressionando ESC: este sairá do software de anotação</p>
 <div class="sect3">
 <h4 id="_adquirindo_imagens_negativas_2">Adquirindo imagens Negativas</h4>
 <div class="paragraph">
-<p>Não poderiamos utilizar o mesmo banco de dados de imagens negativas do findcoke, então procuramos por imagens que não teriam mãos e chegamos a conclusão de usar um banco de imagens de árvores</p>
+<p>Não seria ideal utilizar o mesmo banco de dados de imagens negativas do findcoke pois poderia haver mãos nas imagens, então foram procuradas imagens que não teriam mãos e optou-se por usar um banco de imagens de árvores que pode ser encontrado no seguinte link <a href="http://www.image-net.org">http://www.image-net.org/</a></p>
 </div>
 <div class="paragraph">
-<p>Esse banco de imagens foi armazenado em uma pasta intitulada "Negatives", o passo seguindo foi criar um arquivo "bg.txt" que contivesse um caminho para todas essas imagens. Para criar o arquivo "bg.txt" usamos o algoritmo CountNegatives</p>
+<p>Esse banco de imagens foi armazenado em uma pasta intitulada "Negatives", o passo seguindo foi criar um arquivo "bg.txt" que contivesse um caminho para todas essas imagens. Para criar o arquivo "bg.txt" utilizou-se o algoritmo CountNegatives.</p>
 </div>
 <div id="CountNegatives" class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-python" data-lang="python">#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 30 15:11:05 2018
+<pre class="pygments highlight"><code data-lang="python"><span class="tok-ch">#!/usr/bin/env python3</span>
+<span class="tok-c1"># -*- coding: utf-8 -*-</span>
+<span class="tok-sd">&quot;&quot;&quot;</span>
+<span class="tok-sd">Created on Wed May 30 15:11:05 2018</span>
 
-@author: robotica
-"""
-import os
-import cv2
+<span class="tok-sd">@author: robotica</span>
+<span class="tok-sd">&quot;&quot;&quot;</span>
+<span class="tok-kn">import</span> <span class="tok-nn">os</span>
+<span class="tok-kn">import</span> <span class="tok-nn">cv2</span>
 
-f = open("bg.txt","w")
-for x in os.listdir("Negatives"):
-    #gray = cv2.imread("Negatives/"+x,0)
-    #gray = cv2.resize(gray,(640,480))
-    #cv2.imwrite("Negatives/"+x,gray)
-    f.write("Negatives/"+x+"\n")
-f.close()</code></pre>
+<span class="tok-n">f</span> <span class="tok-o">=</span> <span class="tok-nb">open</span><span class="tok-p">(</span><span class="tok-s2">&quot;bg.txt&quot;</span><span class="tok-p">,</span><span class="tok-s2">&quot;w&quot;</span><span class="tok-p">)</span>
+<span class="tok-k">for</span> <span class="tok-n">x</span> <span class="tok-ow">in</span> <span class="tok-n">os</span><span class="tok-o">.</span><span class="tok-n">listdir</span><span class="tok-p">(</span><span class="tok-s2">&quot;Negatives&quot;</span><span class="tok-p">):</span>
+    <span class="tok-n">f</span><span class="tok-o">.</span><span class="tok-n">write</span><span class="tok-p">(</span><span class="tok-s2">&quot;Negatives/&quot;</span><span class="tok-o">+</span><span class="tok-n">x</span><span class="tok-o">+</span><span class="tok-s2">&quot;</span><span class="tok-se">\n</span><span class="tok-s2">&quot;</span><span class="tok-p">)</span>
+<span class="tok-n">f</span><span class="tok-o">.</span><span class="tok-n">close</span><span class="tok-p">()</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>Nosso arquivo bg.txt ficou da seguinte forma
-.bg.txt</p>
+<p>O arquivo bg.txt ficou da seguinte forma .</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 3. bg.txt</caption>
 <colgroup>
 <col style="width: 100%;">
 </colgroup>
@@ -916,10 +993,10 @@ f.close()</code></pre>
 <div class="sect3">
 <h4 id="_criando_o_arquivo_positives_vec_2">Criando o arquivo positives.vec</h4>
 <div class="paragraph">
-<p>O penultimo passo é criar um arquivo .vec que será usado para o treinamento, basicamente é um arquivo que vai armazenar, assim como o info.dat, a localização das imagens positivas</p>
+<p>O penultimo passo é criar um arquivo .vec que será usado para o treinamento, basicamente é um arquivo que vai armazenar, assim como o info.dat, a localização das imagens positivas.</p>
 </div>
 <div class="paragraph">
-<p>Com isso, lançamos o comando:</p>
+<p>Com isso, foi chamado o comando:</p>
 </div>
 <div class="paragraph">
 <p>opencv_createsamples -info info/info.dat -w 24 -h 24 -num 1287 -vec positives.vec</p>
@@ -928,54 +1005,54 @@ f.close()</code></pre>
 <div class="sect3">
 <h4 id="_treinamento_2">Treinamento</h4>
 <div class="paragraph">
-<p>Utilizamos novamente o commando opencv_traincascade com os seguintes parâmetros para obter nosso arquivo cascade.xml</p>
+<p>Foi utilizado novamente o commando opencv_traincascade com os seguintes parâmetros para obter o arquivo cascade.xml</p>
 </div>
 <div class="paragraph">
-<p>opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 2500 -numNeg 1250 -numStages 25 -w 24 -h 24</p>
+<p>opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1000 -numNeg 1000 -numStages 25 -w 24 -h 24</p>
 </div>
 <div class="paragraph">
 <p>Onde:</p>
 </div>
 <div class="paragraph">
-<p>-data: Pasta onde será salvo o arquivo "cascade.xml"</p>
+<p>-data: Pasta onde será salvo o arquivo "cascade.xml".</p>
 </div>
 <div class="paragraph">
-<p>-vec: arquivo .vec criado anteriormente</p>
+<p>-vec: arquivo .vec criado anteriormente.</p>
 </div>
 <div class="paragraph">
-<p>-numPos: Número de Amostras positivas usadas por rodada</p>
+<p>-numPos: Número de Amostras positivas usadas por rodada.</p>
 </div>
 <div class="paragraph">
-<p>-numNeg: Número de amostras negativas usadas por rodada</p>
+<p>-numNeg: Número de amostras negativas usadas por rodada.</p>
 </div>
 <div class="paragraph">
-<p>-numStages: Número de Estágios ao qual nosso algoritmo vai passar</p>
+<p>-numStages: Número de Estágios ao qual nosso algoritmo vai passar.</p>
 </div>
 <div class="paragraph">
-<p>-w: Largura usada na Imagem Base</p>
+<p>-w: Largura usada na Imagem Base.</p>
 </div>
 <div class="paragraph">
-<p>-h: Altura Usada na Imagem Base</p>
+<p>-h: Altura Usada na Imagem Base.</p>
 </div>
 <div class="paragraph">
-<p>Na imagem abaixo vemos o comando em execução</p>
+<p>Na imagem abaixo vê-se o comando em execução</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="figures/Unidade3/inicio.png" alt="inicio.png">
 </div>
 <div class="title">Figure 13. Cascade Inicial</div>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="figures/Unidade3/meio.png" alt="meio.png">
 </div>
 <div class="title">Figure 14. Cascade em Execução</div>
 </div>
 <div class="paragraph">
-<p>É possível também carregar novos estágios a partir de outros já carregados, vemos isso na figura abaixo</p>
+<p>É possível também carregar novos estágios a partir de outros já carregados, é possível notar isso na figura Figura 15.</p>
 </div>
-<div class="imageblock text-center">
+<div class="imageblock">
 <div class="content">
 <img src="figures/Unidade3/loaded.png" alt="loaded.png">
 </div>
@@ -986,119 +1063,122 @@ f.close()</code></pre>
 <div class="sect2">
 <h3 id="_resultado_final_2">Resultado Final</h3>
 <div class="paragraph">
-<p>Após gerar o cascade do findcoke e do findhand, a partir do código abaixo nós gravamos alguns videos do funcionamento de ambos os cascades em tempo real</p>
+<p>Após gerar o cascade do findcoke e do findhand, a partir do código abaixo foram gravados alguns videos do funcionamento de ambos os cascades em tempo real.</p>
 </div>
 <div id="VideoWritter" class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-cpp" data-lang="cpp">/**
-  @file videowriter_basic.cpp
-  @brief A very basic sample for using VideoWriter and VideoCapture
-  @author PkLab.net
-  @date Aug 24, 2016
-*/
-#include "opencv2/opencv.hpp"
-#include &lt;opencv2/core.hpp&gt;
-#include &lt;opencv2/videoio.hpp&gt;
-#include &lt;opencv2/highgui.hpp&gt;
-#include &lt;iostream&gt;
-#include &lt;stdio.h&gt;
+<pre class="pygments highlight"><code data-lang="cpp"><span class="tok-cm">/**</span>
+<span class="tok-cm">  @file videowriter_basic.cpp</span>
+<span class="tok-cm">  @brief A very basic sample for using VideoWriter and VideoCapture</span>
+<span class="tok-cm">  @author PkLab.net</span>
+<span class="tok-cm">  @date Aug 24, 2016</span>
+<span class="tok-cm">*/</span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&quot;opencv2/opencv.hpp&quot;</span><span class="tok-cp"></span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&lt;opencv2/core.hpp&gt;</span><span class="tok-cp"></span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&lt;opencv2/videoio.hpp&gt;</span><span class="tok-cp"></span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&lt;opencv2/highgui.hpp&gt;</span><span class="tok-cp"></span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&lt;iostream&gt;</span><span class="tok-cp"></span>
+<span class="tok-cp">#include</span> <span class="tok-cpf">&lt;stdio.h&gt;</span><span class="tok-cp"></span>
 
-using namespace cv;
-using namespace std;
+<span class="tok-k">using</span> <span class="tok-k">namespace</span> <span class="tok-n">cv</span><span class="tok-p">;</span>
+<span class="tok-k">using</span> <span class="tok-k">namespace</span> <span class="tok-n">std</span><span class="tok-p">;</span>
 
-Mat detectAndDisplay( Mat frame );
+<span class="tok-n">Mat</span> <span class="tok-nf">detectAndDisplay</span><span class="tok-p">(</span> <span class="tok-n">Mat</span> <span class="tok-n">frame</span> <span class="tok-p">);</span>
 
-int main(int, char**)
-{
-    Mat src;
-    // use default camera as video source
-    VideoCapture cap(0);
-    // check if we succeeded
-    if (!cap.isOpened()) {
-        cerr &lt;&lt; "ERROR! Unable to open camera\n";
-        return -1;
-    }
-    // get one frame from camera to know frame size and type
-    cap &gt;&gt; src;
-    // check if we succeeded
-    if (src.empty()) {
-        cerr &lt;&lt; "ERROR! blank frame grabbed\n";
-        return -1;
-    }
-    bool isColor = (src.type() == CV_8UC3);
+<span class="tok-kt">int</span> <span class="tok-nf">main</span><span class="tok-p">(</span><span class="tok-kt">int</span><span class="tok-p">,</span> <span class="tok-kt">char</span><span class="tok-o">**</span><span class="tok-p">)</span>
+<span class="tok-p">{</span>
+    <span class="tok-n">Mat</span> <span class="tok-n">src</span><span class="tok-p">;</span>
+    <span class="tok-c1">// use default camera as video source</span>
+    <span class="tok-n">VideoCapture</span> <span class="tok-n">cap</span><span class="tok-p">(</span><span class="tok-mi">0</span><span class="tok-p">);</span>
+    <span class="tok-c1">// check if we succeeded</span>
+    <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">cap</span><span class="tok-p">.</span><span class="tok-n">isOpened</span><span class="tok-p">())</span> <span class="tok-p">{</span>
+        <span class="tok-n">cerr</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;ERROR! Unable to open camera</span><span class="tok-se">\n</span><span class="tok-s">&quot;</span><span class="tok-p">;</span>
+        <span class="tok-k">return</span> <span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">;</span>
+    <span class="tok-p">}</span>
+    <span class="tok-c1">// get one frame from camera to know frame size and type</span>
+    <span class="tok-n">cap</span> <span class="tok-o">&gt;&gt;</span> <span class="tok-n">src</span><span class="tok-p">;</span>
+    <span class="tok-c1">// check if we succeeded</span>
+    <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">src</span><span class="tok-p">.</span><span class="tok-n">empty</span><span class="tok-p">())</span> <span class="tok-p">{</span>
+        <span class="tok-n">cerr</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;ERROR! blank frame grabbed</span><span class="tok-se">\n</span><span class="tok-s">&quot;</span><span class="tok-p">;</span>
+        <span class="tok-k">return</span> <span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">;</span>
+    <span class="tok-p">}</span>
+    <span class="tok-kt">bool</span> <span class="tok-n">isColor</span> <span class="tok-o">=</span> <span class="tok-p">(</span><span class="tok-n">src</span><span class="tok-p">.</span><span class="tok-n">type</span><span class="tok-p">()</span> <span class="tok-o">==</span> <span class="tok-n">CV_8UC3</span><span class="tok-p">);</span>
 
-    //--- INITIALIZE VIDEOWRITER
-    VideoWriter writer;
-    int codec = CV_FOURCC('M', 'J', 'P', 'G');  // select desired codec (must be available at runtime)
-    double fps = 5.0;                          // framerate of the created video stream
-    string filename = "./live3.avi";             // name of the output video file
-    writer.open(filename, codec, fps, src.size(), isColor);
-    // check if we succeeded
-    if (!writer.isOpened()) {
-        cerr &lt;&lt; "Could not open the output video file for write\n";
-        return -1;
-    }
+    <span class="tok-c1">//--- INITIALIZE VIDEOWRITER</span>
+    <span class="tok-n">VideoWriter</span> <span class="tok-n">writer</span><span class="tok-p">;</span>
+    <span class="tok-kt">int</span> <span class="tok-n">codec</span> <span class="tok-o">=</span> <span class="tok-n">CV_FOURCC</span><span class="tok-p">(</span><span class="tok-sc">&#39;M&#39;</span><span class="tok-p">,</span> <span class="tok-sc">&#39;J&#39;</span><span class="tok-p">,</span> <span class="tok-sc">&#39;P&#39;</span><span class="tok-p">,</span> <span class="tok-sc">&#39;G&#39;</span><span class="tok-p">);</span>  <span class="tok-c1">// select desired codec (must be available at runtime)</span>
+    <span class="tok-kt">double</span> <span class="tok-n">fps</span> <span class="tok-o">=</span> <span class="tok-mf">5.0</span><span class="tok-p">;</span>                          <span class="tok-c1">// framerate of the created video stream</span>
+    <span class="tok-n">string</span> <span class="tok-n">filename</span> <span class="tok-o">=</span> <span class="tok-s">&quot;./live3.avi&quot;</span><span class="tok-p">;</span>             <span class="tok-c1">// name of the output video file</span>
+    <span class="tok-n">writer</span><span class="tok-p">.</span><span class="tok-n">open</span><span class="tok-p">(</span><span class="tok-n">filename</span><span class="tok-p">,</span> <span class="tok-n">codec</span><span class="tok-p">,</span> <span class="tok-n">fps</span><span class="tok-p">,</span> <span class="tok-n">src</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">(),</span> <span class="tok-n">isColor</span><span class="tok-p">);</span>
+    <span class="tok-c1">// check if we succeeded</span>
+    <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">writer</span><span class="tok-p">.</span><span class="tok-n">isOpened</span><span class="tok-p">())</span> <span class="tok-p">{</span>
+        <span class="tok-n">cerr</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Could not open the output video file for write</span><span class="tok-se">\n</span><span class="tok-s">&quot;</span><span class="tok-p">;</span>
+        <span class="tok-k">return</span> <span class="tok-o">-</span><span class="tok-mi">1</span><span class="tok-p">;</span>
+    <span class="tok-p">}</span>
 
-    //--- GRAB AND WRITE LOOP
-    cout &lt;&lt; "Writing videofile: " &lt;&lt; filename &lt;&lt; endl
-         &lt;&lt; "Press any key to terminate" &lt;&lt; endl;
-    for (;;)
-    {
-        // check if we succeeded
-        if (!cap.read(src)) {
-            cerr &lt;&lt; "ERROR! blank frame grabbed\n";
-            break;
-        }
-        src = detectAndDisplay(src);
-        // encode the frame into the videofile stream
-        writer.write(src);
-        // show live and wait for a key with timeout long enough to show images
-        imshow("Live", src);
-        if (waitKey(5) &gt;= 0)
-            break;
-    }
-    // the videofile will be closed and released automatically in VideoWriter destructor
-    return 0;
-}
+    <span class="tok-c1">//--- GRAB AND WRITE LOOP</span>
+    <span class="tok-n">cout</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Writing videofile: &quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">filename</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span>
+         <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;Press any key to terminate&quot;</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-n">endl</span><span class="tok-p">;</span>
+    <span class="tok-k">for</span> <span class="tok-p">(;;)</span>
+    <span class="tok-p">{</span>
+        <span class="tok-c1">// check if we succeeded</span>
+        <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-o">!</span><span class="tok-n">cap</span><span class="tok-p">.</span><span class="tok-n">read</span><span class="tok-p">(</span><span class="tok-n">src</span><span class="tok-p">))</span> <span class="tok-p">{</span>
+            <span class="tok-n">cerr</span> <span class="tok-o">&lt;&lt;</span> <span class="tok-s">&quot;ERROR! blank frame grabbed</span><span class="tok-se">\n</span><span class="tok-s">&quot;</span><span class="tok-p">;</span>
+            <span class="tok-k">break</span><span class="tok-p">;</span>
+        <span class="tok-p">}</span>
+        <span class="tok-n">src</span> <span class="tok-o">=</span> <span class="tok-n">detectAndDisplay</span><span class="tok-p">(</span><span class="tok-n">src</span><span class="tok-p">);</span>
+        <span class="tok-c1">// encode the frame into the videofile stream</span>
+        <span class="tok-n">writer</span><span class="tok-p">.</span><span class="tok-n">write</span><span class="tok-p">(</span><span class="tok-n">src</span><span class="tok-p">);</span>
+        <span class="tok-c1">// show live and wait for a key with timeout long enough to show images</span>
+        <span class="tok-n">imshow</span><span class="tok-p">(</span><span class="tok-s">&quot;Live&quot;</span><span class="tok-p">,</span> <span class="tok-n">src</span><span class="tok-p">);</span>
+        <span class="tok-k">if</span> <span class="tok-p">(</span><span class="tok-n">waitKey</span><span class="tok-p">(</span><span class="tok-mi">5</span><span class="tok-p">)</span> <span class="tok-o">&gt;=</span> <span class="tok-mi">0</span><span class="tok-p">)</span>
+            <span class="tok-k">break</span><span class="tok-p">;</span>
+    <span class="tok-p">}</span>
+    <span class="tok-c1">// the videofile will be closed and released automatically in VideoWriter destructor</span>
+    <span class="tok-k">return</span> <span class="tok-mi">0</span><span class="tok-p">;</span>
+<span class="tok-p">}</span>
 
-Mat detectAndDisplay( Mat frame )
-{
-	CascadeClassifier coke_cascade;
-	CascadeClassifier hand_cascade;
-    coke_cascade.load("cascade.xml");
-    hand_cascade.load("hand2cascade.xml");
-    Mat frame_gray;
-    cvtColor( frame, frame_gray, COLOR_BGR2GRAY );
-    equalizeHist( frame_gray, frame_gray );
-    //-- Detect faces
-    std::vector&lt;Rect&gt; cokes;
-    std::vector&lt;Rect&gt; hands;
-    coke_cascade.detectMultiScale( frame_gray, cokes, 1.030, 3);
-    hand_cascade.detectMultiScale( frame_gray, hands, 9.3, 16);
-    for ( size_t i = 0; i &lt; cokes.size(); i++ )
-    {
-		Rect coke_i = cokes[i];
-        Point center( cokes[i].x + cokes[i].width/2, cokes[i].y + cokes[i].height/2 );
-        rectangle(frame, coke_i, CV_RGB(0, 255,0), 1);
-        //ellipse( frame, center, Size( cokes[i].width/2, cokes[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4 );
-        Mat faceROI = frame_gray( cokes[i] );
-        //imwrite( "Saida_Webcam.jpg", frame );
-    }
-    for ( size_t i = 0; i &lt; hands.size(); i++ )
-    {
-		Rect hand_i = hands[i];
-        Point center( hands[i].x + hands[i].width/2, hands[i].y + hands[i].height/2 );
-        rectangle(frame, hand_i, CV_RGB(0, 255,0), 1);
-        //ellipse( frame, center, Size( cokes[i].width/2, cokes[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4 );
-        Mat faceROI = frame_gray( hands[i] );
-        //imwrite( "Saida_Webcam.jpg", frame );
-    }
-    return frame;
-}</code></pre>
+<span class="tok-n">Mat</span> <span class="tok-nf">detectAndDisplay</span><span class="tok-p">(</span> <span class="tok-n">Mat</span> <span class="tok-n">frame</span> <span class="tok-p">)</span>
+<span class="tok-p">{</span>
+	<span class="tok-n">CascadeClassifier</span> <span class="tok-n">coke_cascade</span><span class="tok-p">;</span>
+	<span class="tok-n">CascadeClassifier</span> <span class="tok-n">hand_cascade</span><span class="tok-p">;</span>
+    <span class="tok-n">coke_cascade</span><span class="tok-p">.</span><span class="tok-n">load</span><span class="tok-p">(</span><span class="tok-s">&quot;cascade.xml&quot;</span><span class="tok-p">);</span>
+    <span class="tok-n">hand_cascade</span><span class="tok-p">.</span><span class="tok-n">load</span><span class="tok-p">(</span><span class="tok-s">&quot;hand2cascade.xml&quot;</span><span class="tok-p">);</span>
+    <span class="tok-n">Mat</span> <span class="tok-n">frame_gray</span><span class="tok-p">;</span>
+    <span class="tok-n">cvtColor</span><span class="tok-p">(</span> <span class="tok-n">frame</span><span class="tok-p">,</span> <span class="tok-n">frame_gray</span><span class="tok-p">,</span> <span class="tok-n">COLOR_BGR2GRAY</span> <span class="tok-p">);</span>
+    <span class="tok-n">equalizeHist</span><span class="tok-p">(</span> <span class="tok-n">frame_gray</span><span class="tok-p">,</span> <span class="tok-n">frame_gray</span> <span class="tok-p">);</span>
+    <span class="tok-c1">//-- Detect faces</span>
+    <span class="tok-n">std</span><span class="tok-o">::</span><span class="tok-n">vector</span><span class="tok-o">&lt;</span><span class="tok-n">Rect</span><span class="tok-o">&gt;</span> <span class="tok-n">cokes</span><span class="tok-p">;</span>
+    <span class="tok-n">std</span><span class="tok-o">::</span><span class="tok-n">vector</span><span class="tok-o">&lt;</span><span class="tok-n">Rect</span><span class="tok-o">&gt;</span> <span class="tok-n">hands</span><span class="tok-p">;</span>
+    <span class="tok-n">coke_cascade</span><span class="tok-p">.</span><span class="tok-n">detectMultiScale</span><span class="tok-p">(</span> <span class="tok-n">frame_gray</span><span class="tok-p">,</span> <span class="tok-n">cokes</span><span class="tok-p">,</span> <span class="tok-mf">1.030</span><span class="tok-p">,</span> <span class="tok-mi">3</span><span class="tok-p">);</span>
+    <span class="tok-n">hand_cascade</span><span class="tok-p">.</span><span class="tok-n">detectMultiScale</span><span class="tok-p">(</span> <span class="tok-n">frame_gray</span><span class="tok-p">,</span> <span class="tok-n">hands</span><span class="tok-p">,</span> <span class="tok-mf">9.3</span><span class="tok-p">,</span> <span class="tok-mi">16</span><span class="tok-p">);</span>
+    <span class="tok-k">for</span> <span class="tok-p">(</span> <span class="tok-kt">size_t</span> <span class="tok-n">i</span> <span class="tok-o">=</span> <span class="tok-mi">0</span><span class="tok-p">;</span> <span class="tok-n">i</span> <span class="tok-o">&lt;</span> <span class="tok-n">cokes</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">();</span> <span class="tok-n">i</span><span class="tok-o">++</span> <span class="tok-p">)</span>
+    <span class="tok-p">{</span>
+		<span class="tok-n">Rect</span> <span class="tok-n">coke_i</span> <span class="tok-o">=</span> <span class="tok-n">cokes</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">];</span>
+        <span class="tok-n">Point</span> <span class="tok-n">center</span><span class="tok-p">(</span> <span class="tok-n">cokes</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">x</span> <span class="tok-o">+</span> <span class="tok-n">cokes</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">width</span><span class="tok-o">/</span><span class="tok-mi">2</span><span class="tok-p">,</span> <span class="tok-n">cokes</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">y</span> <span class="tok-o">+</span> <span class="tok-n">cokes</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">height</span><span class="tok-o">/</span><span class="tok-mi">2</span> <span class="tok-p">);</span>
+        <span class="tok-n">rectangle</span><span class="tok-p">(</span><span class="tok-n">frame</span><span class="tok-p">,</span> <span class="tok-n">coke_i</span><span class="tok-p">,</span> <span class="tok-n">CV_RGB</span><span class="tok-p">(</span><span class="tok-mi">0</span><span class="tok-p">,</span> <span class="tok-mi">255</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">),</span> <span class="tok-mi">1</span><span class="tok-p">);</span>
+        <span class="tok-c1">//ellipse( frame, center, Size( cokes[i].width/2, cokes[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4 );</span>
+        <span class="tok-n">Mat</span> <span class="tok-n">faceROI</span> <span class="tok-o">=</span> <span class="tok-n">frame_gray</span><span class="tok-p">(</span> <span class="tok-n">cokes</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">]</span> <span class="tok-p">);</span>
+        <span class="tok-c1">//imwrite( &quot;Saida_Webcam.jpg&quot;, frame );</span>
+    <span class="tok-p">}</span>
+    <span class="tok-k">for</span> <span class="tok-p">(</span> <span class="tok-kt">size_t</span> <span class="tok-n">i</span> <span class="tok-o">=</span> <span class="tok-mi">0</span><span class="tok-p">;</span> <span class="tok-n">i</span> <span class="tok-o">&lt;</span> <span class="tok-n">hands</span><span class="tok-p">.</span><span class="tok-n">size</span><span class="tok-p">();</span> <span class="tok-n">i</span><span class="tok-o">++</span> <span class="tok-p">)</span>
+    <span class="tok-p">{</span>
+		<span class="tok-n">Rect</span> <span class="tok-n">hand_i</span> <span class="tok-o">=</span> <span class="tok-n">hands</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">];</span>
+        <span class="tok-n">Point</span> <span class="tok-n">center</span><span class="tok-p">(</span> <span class="tok-n">hands</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">x</span> <span class="tok-o">+</span> <span class="tok-n">hands</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">width</span><span class="tok-o">/</span><span class="tok-mi">2</span><span class="tok-p">,</span> <span class="tok-n">hands</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">y</span> <span class="tok-o">+</span> <span class="tok-n">hands</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">].</span><span class="tok-n">height</span><span class="tok-o">/</span><span class="tok-mi">2</span> <span class="tok-p">);</span>
+        <span class="tok-n">rectangle</span><span class="tok-p">(</span><span class="tok-n">frame</span><span class="tok-p">,</span> <span class="tok-n">hand_i</span><span class="tok-p">,</span> <span class="tok-n">CV_RGB</span><span class="tok-p">(</span><span class="tok-mi">0</span><span class="tok-p">,</span> <span class="tok-mi">255</span><span class="tok-p">,</span><span class="tok-mi">0</span><span class="tok-p">),</span> <span class="tok-mi">1</span><span class="tok-p">);</span>
+        <span class="tok-c1">//ellipse( frame, center, Size( cokes[i].width/2, cokes[i].height/2 ), 0, 0, 360, Scalar( 255, 0, 255 ), 4 );</span>
+        <span class="tok-n">Mat</span> <span class="tok-n">faceROI</span> <span class="tok-o">=</span> <span class="tok-n">frame_gray</span><span class="tok-p">(</span> <span class="tok-n">hands</span><span class="tok-p">[</span><span class="tok-n">i</span><span class="tok-p">]</span> <span class="tok-p">);</span>
+        <span class="tok-c1">//imwrite( &quot;Saida_Webcam.jpg&quot;, frame );</span>
+    <span class="tok-p">}</span>
+    <span class="tok-k">return</span> <span class="tok-n">frame</span><span class="tok-p">;</span>
+<span class="tok-p">}</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>E o resultado que obtemos foram os videos abaixo</p>
+<p>É possível notar que os parâmetros para o cascade do findcoke foram bem diferentes do findhand.</p>
+</div>
+<div class="paragraph">
+<p>O resultado obtido pode ser visto nos videos abaixo.</p>
 </div>
 <div class="videoblock">
 <div class="content">
@@ -1126,8 +1206,24 @@ Your browser does not support the video tag.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-06-28 23:20:08 -03
+Last updated 2018-06-29 00:20:37 -03
 </div>
 </div>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.0/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 </body>
 </html>
